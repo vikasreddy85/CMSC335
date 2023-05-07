@@ -118,7 +118,7 @@ app.post("/", (request, response) => {
         const randomIndex2 = Math.floor(Math.random() * (holder2.length - 1));
         const randomIndex3 = Math.floor(Math.random() * (holder3.length - 1));
 
-
+        console.log("A" + holder1 + "A");
         let q1 = holder1[randomIndex1].query;
         let q2 = holder2[randomIndex2].query;
         let q3 = holder3[randomIndex3].query;
@@ -191,17 +191,56 @@ app.post("/", (request, response) => {
     Promise.all(meals).then(function(array){
         console.log(array);
 
-        let table = '<table border="1"><thead><tr><th>Food</th><th>Time</th></tr></thead><tbody>';
 
-        array.forEach(
-            element => 
-            {
-                table += '<tr><td>' + element.name + '</td><td>' + element.time + '</td></tr>'; 
-            })
+        response.render("result", {
+            breakfast1: array[0].name, 
+            breakfast2: array[3].name, 
+            breakfast3: array[6].name, 
+            bc1: array[0].carbohydrates, 
+            bc2: array[3].carbohydrates,
+            bc3: array[6].carbohydrates,
+            bp1: array[0].protein, 
+            bp2: array[3].protein,
+            bp3: array[6].protein,
+            bf1: array[0].fat, 
+            bf2: array[3].fat,
+            bf3: array[6].fat,
+            bcal1: array[0].calories, 
+            bcal2: array[3].calories,
+            bcal3: array[6].calories,
 
-        table += '</tbody></table>';
+            lunch1: array[1].name, 
+            lunch2: array[4].name, 
+            lunch3: array[7].name, 
+            lc1: array[1].carbohydrates, 
+            lc2: array[4].carbohydrates,
+            lc3: array[7].carbohydrates,
+            lp1: array[1].protein, 
+            lp2: array[4].protein,
+            lp3: array[7].protein,
+            lf1: array[1].fat, 
+            lf2: array[4].fat,
+            lf3: array[7].fat,
+            lcal1: array[1].calories, 
+            lcal2: array[4].calories,
+            lcal3: array[7].calories,
 
-        response.render("result", {result: table}); 
+            dinner1: array[2].name, 
+            dinner2: array[5].name, 
+            dinner3: array[8].name, 
+            dc1: array[2].carbohydrates, 
+            dc2: array[5].carbohydrates,
+            dc3: array[8].carbohydrates,
+            dp1: array[2].protein, 
+            dp2: array[5].protein,
+            dp3: array[8].protein,
+            df1: array[2].fat, 
+            df2: array[5].fat,
+            df3: array[8].fat,
+            dcal1: array[2].calories, 
+            dcal2: array[5].calories,
+            dcal3: array[8].calories
+        }); 
     });
 
 
