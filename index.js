@@ -12,14 +12,13 @@ app.set('views', './pages');
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 process.stdin.setEncoding("utf8");
-require("dotenv").config({ path: path.resolve(__dirname, 'credentials/.env')})
 
-const apiKey = process.env.API_KEY;
-const databaseAndCollection = {db: process.env.MONGO_DB_NAME, collection: process.env.MONGO_COLLECTION};
+const apiKey = 'DsANKhYUjao9yvEYid5SdNfJtZAIuyctD3b8UzLa';
+const databaseAndCollection = {db: 'My-Fitterp-Pal', collection: 'foodData'};
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
-const uri = process.env.MONGO_LINK;
+const uri = 'mongodb+srv://jeff85:YyxOWVfuqBCCfg0Q@cluster0.nwnhobm.mongodb.net/?retryWrites=true&w=majority';
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
