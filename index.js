@@ -15,12 +15,83 @@ process.stdin.setEncoding("utf8");
 require("dotenv").config({ path: path.resolve(__dirname, 'credentials/.env')})
 
 const apiKey = process.env.API_KEY;
+const databaseAndCollection = {db: process.env.MONGO_DB_NAME, collection: process.env.MONGO_COLLECTION};
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+
+const uri = process.env.MONGO_LINK;
+
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 if (process.argv.length !== 2) {
     console.log('Application failed to start.');
     process.exit(1);
 } else{
     console.log(`Web server started and running at http://localhost:${portNumber}`);
+}
+
+async function toInputMongo(name, email, array){
+
+    try {
+        await client.connect();
+        let newData = {
+            name: name,
+            email: email, 
+            breakfast1: array[0].name, 
+            breakfast2: array[3].name, 
+            breakfast3: array[6].name, 
+            bc1: array[0].carbohydrates, 
+            bc2: array[3].carbohydrates,
+            bc3: array[6].carbohydrates,
+            bp1: array[0].protein, 
+            bp2: array[3].protein,
+            bp3: array[6].protein,
+            bf1: array[0].fat, 
+            bf2: array[3].fat,
+            bf3: array[6].fat,
+            bcal1: array[0].calories, 
+            bcal2: array[3].calories,
+            bcal3: array[6].calories,
+
+            lunch1: array[1].name, 
+            lunch2: array[4].name, 
+            lunch3: array[7].name, 
+            lc1: array[1].carbohydrates, 
+            lc2: array[4].carbohydrates,
+            lc3: array[7].carbohydrates,
+            lp1: array[1].protein, 
+            lp2: array[4].protein,
+            lp3: array[7].protein,
+            lf1: array[1].fat, 
+            lf2: array[4].fat,
+            lf3: array[7].fat,
+            lcal1: array[1].calories, 
+            lcal2: array[4].calories,
+            lcal3: array[7].calories,
+
+            dinner1: array[2].name, 
+            dinner2: array[5].name, 
+            dinner3: array[8].name, 
+            dc1: array[2].carbohydrates, 
+            dc2: array[5].carbohydrates,
+            dc3: array[8].carbohydrates,
+            dp1: array[2].protein, 
+            dp2: array[5].protein,
+            dp3: array[8].protein,
+            df1: array[2].fat, 
+            df2: array[5].fat,
+            df3: array[8].fat,
+            dcal1: array[2].calories, 
+            dcal2: array[5].calories,
+            dcal3: array[8].calories
+        };
+        await client.db(databaseAndCollection.db).collection(databaseAndCollection.collection).insertOne(newData);
+    } catch (e) {
+        console.error(e);
+    } finally {
+        await client.close();
+    }
+
 }
 
 process.stdout.write('Stop to shutdown the server: ');
@@ -42,6 +113,7 @@ app.post("/", (request, response) => {
     let total_bmr = 0.0;
     let hold_height;
     let temp_height; 
+    let email = request.body.email;
     let age = parseFloat(request.body.age);
     let unit = request.body.unit;
     let height = request.body.height;
@@ -189,7 +261,8 @@ app.post("/", (request, response) => {
 
 
     Promise.all(meals).then(function(array){
-        console.log(array);
+        // console.log(array);
+        toInputMongo(name, email, array);
 
 
         response.render("result", {
@@ -250,5 +323,76 @@ function getData(key){
     return fetch(key).then(response => response.json());
 }
 
+app.get("/info", (request, response) => {
+    response.render("email.ejs");
+});
+
+
+
+app.use(bodyParser.urlencoded({extended:false}));
+app.post("/getInfo", async (request, response) => {
+    let email = request.body.email;
+    try {
+        await client.connect();
+        let filter = {email: email};
+        const result = await client.db(databaseAndCollection.db)
+                            .collection(databaseAndCollection.collection)
+                            .findOne(filter);
+        //console.log(result.name);
+        response.render("result", {
+            breakfast1: result.breakfast1, 
+            breakfast2: result.breakfast2, 
+            breakfast3: result.breakfast3, 
+            bc1: result.bc1, 
+            bc2: result.bc2,
+            bc3: result.bc3,
+            bp1: result.bp1, 
+            bp2: result.bp2,
+            bp3: result.bp3,
+            bf1: result.bf1, 
+            bf2: result.bf2,
+            bf3: result.bf3,
+            bcal1: result.bcal1, 
+            bcal2: result.bcal2,
+            bcal3: result.bcal3,
+
+            lunch1: result.lunch1, 
+            lunch2: result.lunch2, 
+            lunch3: result.lunch3, 
+            lc1: result.lc1, 
+            lc2: result.lc2,
+            lc3: result.lc3,
+            lp1: result.lp1, 
+            lp2: result.lp2,
+            lp3: result.lp3,
+            lf1: result.lf1, 
+            lf2: result.lf2,
+            lf3: result.lf3,
+            lcal1: result.lcal1, 
+            lcal2: result.lcal2,
+            lcal3: result.lcal3,
+
+            dinner1: result.dinner1, 
+            dinner2: result.dinner2, 
+            dinner3: result.dinner3, 
+            dc1: result.dc1, 
+            dc2: result.dc2,
+            dc3: result.dc3,
+            dp1: result.dp1, 
+            dp2: result.dp2,
+            dp3: result.dp3,
+            df1: result.df1, 
+            df2: result.df2,
+            df3: result.df3,
+            dcal1: result.dcal1, 
+            dcal2: result.dcal2,
+            dcal3: result.dcal3
+        });
+    } catch (e) {
+        console.error(e);
+    } finally {
+        await client.close();
+    }
+});
 
 app.listen(portNumber);

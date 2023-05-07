@@ -25,7 +25,7 @@
   bottom: 0;
   position: absolute;
   width: 100%;
-  zoom: 0.77;
+  zoom: 0.67;
 }
 
 .banner {
@@ -162,4 +162,11 @@ input:focus ~ label, input:valid ~ label 		{
   top:-20px;
   font-size:14px;
   color:#5264AE;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
