@@ -526,4 +526,4 @@ const Pancakes_Plain = {
     
     dinner: [Grilled_Hot_Dog, Onion_Marmalade_Sandwich, White_Chicken, Pesto_Pasta, Philly_Cheese_Steak_Pizza, Vegetable_Pizza, Spaghetti]
   };
-  module.exports = (North_Diner, South_Diner, Yahentamitsi)
+  module.exports = {North_Diner, South_Diner, Yahentamitsi}

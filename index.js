@@ -17,7 +17,7 @@ if (process.argv.length !== 2) {
     console.log('Application failed to start.');
     process.exit(1);
 } else{
-    console.log(`Web server started and running at https://localhost:${portNumber}`);
+    console.log(`Web server started and running at http://localhost:${portNumber}`);
 }
 
 process.stdout.write('Stop to shutdown the server: ');
@@ -32,11 +32,13 @@ process.stdin.once('data', (input) => {
 app.get("/", (request, response) => {
     response.render("index.ejs");
 });
-
+app.get("/res", (request, response) => { //Delete
+    response.render("result.ejs");
+});
 app.use(bodyParser.urlencoded({ extended: false }));
 app.post("/", (request, response) => {
     let body = request.body;
-    let result = handleFormSubmit(body);
+    let result = "test";
     response.render("result", {result}); 
 });
 
