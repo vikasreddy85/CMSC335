@@ -6,7 +6,7 @@ const data = require('./public/data');
 const portNumber = 3000;
 const fetch = require('node-fetch');
 const {North_Diner, South_Diner, Yahentamitsi} = require("./public/data");
-let total_bmr;
+let name;
 // require("dotenv").config({ path: path.resolve(__dirname, '.env') }) 
 app.set('views', './pages');
 app.set('view engine', 'ejs');
@@ -38,10 +38,10 @@ app.get("/", (request, response) => {
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.post("/", (request, response) => {
+    name = request.body.name;
     let total_bmr = 0.0;
     let hold_height;
     let temp_height; 
-    let name = request.body.name;
     let age = parseFloat(request.body.age);
     let unit = request.body.unit;
     let height = request.body.height;
@@ -193,59 +193,57 @@ app.post("/", (request, response) => {
 
 
         response.render("result", {
+            name: name,
+            total_bmr: total_bmr, 
             breakfast1: array[0].name, 
             breakfast2: array[3].name, 
             breakfast3: array[6].name, 
-            bc1: array[0].carbohydrates, 
-            bc2: array[3].carbohydrates,
-            bc3: array[6].carbohydrates,
-            bp1: array[0].protein, 
-            bp2: array[3].protein,
-            bp3: array[6].protein,
-            bf1: array[0].fat, 
-            bf2: array[3].fat,
-            bf3: array[6].fat,
-            bcal1: array[0].calories, 
-            bcal2: array[3].calories,
-            bcal3: array[6].calories,
+            bc1: array[0].carbohydrates.toFixed(1), 
+            bc2: array[3].carbohydrates.toFixed(1),
+            bc3: array[6].carbohydrates.toFixed(1),
+            bp1: array[0].protein.toFixed(1), 
+            bp2: array[3].protein.toFixed(1),
+            bp3: array[6].protein.toFixed(1),
+            bf1: array[0].fat.toFixed(1), 
+            bf2: array[3].fat.toFixed(1),
+            bf3: array[6].fat.toFixed(1),
+            bcal1: array[0].calories.toFixed(1), 
+            bcal2: array[3].calories.toFixed(1),
+            bcal3: array[6].calories.toFixed(1),
 
             lunch1: array[1].name, 
             lunch2: array[4].name, 
             lunch3: array[7].name, 
-            lc1: array[1].carbohydrates, 
-            lc2: array[4].carbohydrates,
-            lc3: array[7].carbohydrates,
-            lp1: array[1].protein, 
-            lp2: array[4].protein,
-            lp3: array[7].protein,
-            lf1: array[1].fat, 
-            lf2: array[4].fat,
-            lf3: array[7].fat,
-            lcal1: array[1].calories, 
-            lcal2: array[4].calories,
-            lcal3: array[7].calories,
+            lc1: array[1].carbohydrates.toFixed(1), 
+            lc2: array[4].carbohydrates.toFixed(1),
+            lc3: array[7].carbohydrates.toFixed(1),
+            lp1: array[1].protein.toFixed(1), 
+            lp2: array[4].protein.toFixed(1),
+            lp3: array[7].protein.toFixed(1),
+            lf1: array[1].fat.toFixed(1), 
+            lf2: array[4].fat.toFixed(1),
+            lf3: array[7].fat.toFixed(1),
+            lcal1: array[1].calories.toFixed(1), 
+            lcal2: array[4].calories.toFixed(1),
+            lcal3: array[7].calories.toFixed(1),
 
             dinner1: array[2].name, 
             dinner2: array[5].name, 
             dinner3: array[8].name, 
-            dc1: array[2].carbohydrates, 
-            dc2: array[5].carbohydrates,
-            dc3: array[8].carbohydrates,
-            dp1: array[2].protein, 
-            dp2: array[5].protein,
-            dp3: array[8].protein,
-            df1: array[2].fat, 
-            df2: array[5].fat,
-            df3: array[8].fat,
-            dcal1: array[2].calories, 
-            dcal2: array[5].calories,
-            dcal3: array[8].calories
+            dc1: array[2].carbohydrates.toFixed(1), 
+            dc2: array[5].carbohydrates.toFixed(1),
+            dc3: array[8].carbohydrates.toFixed(1),
+            dp1: array[2].protein.toFixed(1), 
+            dp2: array[5].protein.toFixed(1),
+            dp3: array[8].protein.toFixed(1),
+            df1: array[2].fat.toFixed(1), 
+            df2: array[5].fat.toFixed(1),
+            df3: array[8].fat.toFixed(1),
+            dcal1: array[2].calories.toFixed(1), 
+            dcal2: array[5].calories.toFixed(1),
+            dcal3: array[8].calories.toFixed(1)
         }); 
-    });
-
-
-
-    
+    }); 
 });
 
 function getData(key){

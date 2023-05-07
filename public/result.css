@@ -4,15 +4,32 @@
     margin-top: 15px;
     text-align: center;
     color: black;
-    font-size: 70px;
+    font-size: 7.9vh;
     text-decoration: underline;
+}
+
+.instructions{
+    height: 15vh;
+    font-size: 2.3vh;
+    font-family: 'Space Grotesk', sans-serif;	
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.conclusion{
+    height: 10vh;
+    font-size: 2.4vh;
+    font-family: 'Space Grotesk', sans-serif;	
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 15vh;
 }
 
 .meals {
     font-family: 'Space Grotesk', sans-serif;	
     margin-top: 15px;
     color: black;
-    font-size: 60px;
+    font-size: 7.1vh;
     text-decoration: underline;
     margin-bottom: 0.5%;
 }
@@ -57,12 +74,12 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
-  .item-text{
+.item-text {
     font-family: 'Space Grotesk', sans-serif;	
-    line-height: 1.2;
+    line-height: 1.1;
     font-weight: 500;
-    font-size: 7vh;
-  }
+    font-size: 5vh;
+}
 
 .calories{
     display: flex;
@@ -102,14 +119,23 @@
     margin-top: -2.2vh;
 }
 
-#activity-range{
+.current-calorie, .current-breakfast, .current-lunch, .current-dinner{
+    display: inline;
+}
+
+.margin {
+    height: 2vh;
+    margin-top: 2vh;
+}
+
+#activity-range1, #activity-range2, #activity-range3, #activity-range4, #activity-range5, #activity-range6, #activity-range7, #activity-range8, #activity-range9 {
     height: 1vh;
     width: 90%;
     margin-left: 5%;
     margin-top: -0.8vh;
 }
 
-#activity-number {
+#activity-number1, #activity-number2, #activity-number3, #activity-number4, #activity-number5, #activity-number6, #activity-number7, #activity-number8, #activity-number9  {
     font-family: 'Space Grotesk', sans-serif;	
     font-size: 2vh;
     color: white;

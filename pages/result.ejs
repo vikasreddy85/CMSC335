@@ -10,6 +10,11 @@
 </head>
 <body>
     <h1 class="header">Results</h1>
+    <div class = "instructions">
+        <p>Hello <%- name %>! Please read the following instructions:</p>
+        <p>1. Adjust the slider to change the your desired portion size of the food item.</p>
+        <p>2. Please scroll to the bottom of the page to view your recommended calorie count for breakfast, lunch, and dinner, as well as the total calorie count for the day.</p>
+    </div>
     <h2 class = "meals">Breakfast</h2>
     <div class="third">
         <div class = "box">
@@ -18,21 +23,21 @@
             </div>
             <div class ="calories">
                 <div class="circle">
-                    <p>Carbs<br>&nbsp;<%- bc1 %></p>
+                    <p>Carbs<br>&nbsp;<span class="bc1"><%- bc1 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Protein<br>&nbsp;&nbsp;&nbsp;<%- bp1 %></p>
+                    <p>Protein<br>&nbsp;&nbsp;&nbsp;<span class="bp1"><%- bp1 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Fat<br><%- bf1 %></p>
+                    <p>Fat<br><span class="bf1"><%- bf1 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Calories<br>&nbsp;&nbsp;&nbsp;<%- bcal1 %></p>
+                    <p>Calories<br>&nbsp;&nbsp;&nbsp;<span class="bcal1"><%- bcal1 %></span></p>
                 </div>
             </div>
             <div class = "slider">
-                <p><strong id="activity-number">500g</strong></p>
-                <input type="range" id="activity-range1" min="100" max="1000" step="100" value="500">
+                <p><strong id="activity-number1">100g</strong></p>
+                <input type="range" id="activity-range1" min="0" max="250" step="50" value="100">
             </div>
         </div>
         <div class = "box">
@@ -41,21 +46,21 @@
             </div>
             <div class ="calories">
                 <div class="circle">
-                    <p>Carbs<br>&nbsp;<%- bc2 %></p>
+                    <p>Carbs<br>&nbsp;<span class="bc2"><%- bc2 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Protein<br>&nbsp;&nbsp;&nbsp;<%- bp2 %></p>
+                    <p>Protein<br>&nbsp;&nbsp;&nbsp;<span class="bp2"><%- bp2 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Fat<br><%- bf2 %></p>
+                    <p>Fat<br><span class="bf2"><%- bf2 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Calories<br>&nbsp;&nbsp;&nbsp;<%- bcal2 %></p>
+                    <p>Calories<br>&nbsp;&nbsp;&nbsp;<span class="bcal2"><%- bcal2 %></span></p>
                 </div>
             </div>
             <div class = "slider">
-                <p><strong id="activity-number">500g</strong></p>
-                <input type="range" id="activity-range2" min="100" max="1000" step="100" value="500">
+                <p><strong id="activity-number2">100g</strong></p>
+                <input type="range" id="activity-range2" min="0" max="250" step="50" value="100">
             </div>
         </div>
         <div class = "box">
@@ -64,21 +69,21 @@
             </div>
             <div class ="calories">
                 <div class="circle">
-                    <p>Carbs<br>&nbsp;<%- bc3 %></p>
+                    <p>Carbs<br>&nbsp;<span class="bc3"><%- bc3 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Protein<br>&nbsp;&nbsp;&nbsp;<%- bp3 %></p>
+                    <p>Protein<br>&nbsp;&nbsp;&nbsp;<span class="bp3"><%- bp3 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Fat<br><%- bf3 %></p>
+                    <p>Fat<br><span class="bf3"><%- bf3 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Calories<br>&nbsp;&nbsp;&nbsp;<%- bcal3 %></p>
+                    <p>Calories<br>&nbsp;&nbsp;&nbsp;<span class="bcal3"><%- bcal3%></span></p>
                 </div>
             </div>
             <div class = "slider">
-                <p><strong id="activity-number">500g</strong></p>
-                <input type="range" id="activity-range3" min="100" max="1000" step="100" value="500">
+                <p><strong id="activity-number3">100g</strong></p>
+                <input type="range" id="activity-range3" min="0" max="250" step="50" value="100">
             </div>
         </div>
     </div>
@@ -91,21 +96,21 @@
             </div>
             <div class ="calories">
                 <div class="circle">
-                    <p>Carbs<br>&nbsp;<%- lc1 %></p>
+                    <p>Carbs<br>&nbsp;<span class="lc1"><%- lc1 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Protein<br>&nbsp;&nbsp;&nbsp;<%- lp1 %></p>
+                    <p>Protein<br>&nbsp;&nbsp;&nbsp;<span class="lp1"><%- lp1 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Fat<br><%- lf1 %></p>
+                    <p>Fat<br><span class="lf1"><%- lf1 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Calories<br>&nbsp;&nbsp;&nbsp;<%- lcal1 %></p>
+                    <p>Calories<br>&nbsp;&nbsp;&nbsp;<span class="lcal1"><%- lcal1 %></span></p>
                 </div>
             </div>
             <div class = "slider">
-                <p><strong id="activity-number">500g</strong></p>
-                <input type="range" id="activity-range4" min="100" max="1000" step="100" value="500">
+                <p><strong id="activity-number4">100g</strong></p>
+                <input type="range" id="activity-range4" min="0" max="250" step="50" value="100">
             </div>
         </div>
         <div class = "box">
@@ -114,21 +119,21 @@
             </div>
             <div class ="calories">
                 <div class="circle">
-                    <p>Carbs<br>&nbsp;<%- lc2 %></p>
+                    <p>Carbs<br>&nbsp;<span class="lc2"><%- lc2 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Protein<br>&nbsp;&nbsp;&nbsp;<%- lp2 %></p>
+                    <p>Protein<br>&nbsp;&nbsp;&nbsp;<span class="lp2"><%- lp2 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Fat<br><%- lf2 %></p>
+                    <p>Fat<br><span class="lf2"><%- lf2 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Calories<br>&nbsp;&nbsp;&nbsp;<%- lcal2 %></p>
+                    <p>Calories<br>&nbsp;&nbsp;&nbsp;<span class="lcal2"><%- lcal2 %></span></p>
                 </div>
             </div>
             <div class = "slider">
-                <p><strong id="activity-number">500g</strong></p>
-                <input type="range" id="activity-range5" min="100" max="1000" step="100" value="500">
+                <p><strong id="activity-number5">100g</strong></p>
+                <input type="range" id="activity-range5" min="0" max="250" step="50" value="100">
             </div>
         </div>
         <div class = "box">
@@ -137,21 +142,21 @@
             </div>
             <div class ="calories">
                 <div class="circle">
-                    <p>Carbs<br>&nbsp;<%- lc3 %></p>
+                    <p>Carbs<br>&nbsp;<span class="lc3"><%- lc3 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Protein<br>&nbsp;&nbsp;&nbsp;<%- lp3 %></p>
+                    <p>Protein<br>&nbsp;&nbsp;&nbsp;<span class="lp3"><%- lp3 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Fat<br><%- lf3 %></p>
+                    <p>Fat<br><span class="lf3"><%- lf3 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Calories<br>&nbsp;&nbsp;&nbsp;<%- lcal3 %></p>
+                    <p>Calories<br>&nbsp;&nbsp;&nbsp;<span class="lcal3"><%- lcal3 %></span></p>
                 </div>
             </div>
             <div class = "slider">
-                <p><strong id="activity-number">500g</strong></p>
-                <input type="range" id="activity-range6" min="100" max="1000" step="100" value="500">
+                <p><strong id="activity-number6">100g</strong></p>
+                <input type="range" id="activity-range6" min="0" max="250" step="50" value="100">
             </div>
         </div>
     </div>
@@ -164,21 +169,21 @@
             </div>
             <div class ="calories">
                 <div class="circle">
-                    <p>Carbs<br>&nbsp;<%- dc1 %></p>
+                    <p>Carbs<br>&nbsp;<span class="dc1"><%- dc1 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Protein<br>&nbsp;&nbsp;&nbsp;<%- dp1 %></p>
+                    <p>Protein<br>&nbsp;&nbsp;&nbsp;<span class="dp1"><%- dp1 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Fat<br><%- df1 %></p>
+                    <p>Fat<br><span class="df1"><%- df1 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Calories<br>&nbsp;&nbsp;&nbsp;<%- dcal1 %></p>
+                    <p>Calories<br>&nbsp;&nbsp;&nbsp;<span class="dcal1"><%- dcal1 %></span></p>
                 </div>
             </div>
             <div class = "slider">
-                <p><strong id="activity-number">500g</strong></p>
-                <input type="range" id="activity-range7" min="100" max="1000" step="100" value="500">
+                <p><strong id="activity-number7">100g</strong></p>
+                <input type="range" id="activity-range7" min="0" max="250" step="50" value="100">
             </div>
         </div>
         <div class = "box">
@@ -187,21 +192,21 @@
             </div>
             <div class ="calories">
                 <div class="circle">
-                    <p>Carbs<br>&nbsp;<%- dc2 %></p>
+                    <p>Carbs<br>&nbsp;<span class="dc2"><%- dc2 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Protein<br>&nbsp;&nbsp;&nbsp;<%- dp2 %></p>
+                    <p>Protein<br>&nbsp;&nbsp;&nbsp;<span class="dp2"><%- dp2 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Fat<br><%- df2 %></p>
+                    <p>Fat<br><span class="df2"><%- df2 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Calories<br>&nbsp;&nbsp;&nbsp;<%- dcal2 %></p>
+                    <p>Calories<br>&nbsp;&nbsp;&nbsp;<span class="dcal2"><%- dcal2 %></span></p>
                 </div>
             </div>
             <div class = "slider">
-                <p><strong id="activity-number">500g</strong></p>
-                <input type="range" id="activity-range8" min="100" max="1000" step="100" value="500">
+                <p><strong id="activity-number8">100g</strong></p>
+                <input type="range" id="activity-range8" min="0" max="250" step="50" value="100">
             </div>
         </div>
         <div class = "box">
@@ -210,23 +215,35 @@
             </div>
             <div class ="calories">
                 <div class="circle">
-                    <p>Carbs<br>&nbsp;<%- dc3 %></p>
+                    <p>Carbs<br>&nbsp;<span class="dc3"><%- dc3 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Protein<br>&nbsp;&nbsp;&nbsp;<%- dp3 %></p>
+                    <p>Protein<br>&nbsp;&nbsp;&nbsp;<span class="dp3"><%- dp3 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Fat<br><%- df3 %></p>
+                    <p>Fat<br><span class="df3"><%- df3 %></span></p>
                 </div>
                 <div class="circle">
-                    <p>Calories<br>&nbsp;&nbsp;&nbsp;<%- dcal3 %></p>
+                    <p>Calories<br>&nbsp;&nbsp;&nbsp;<span class="dcal3"><%- dcal3 %></span></p>
                 </div>
             </div>
             <div class = "slider">
-                <p><strong id="activity-number">500g</strong></p>
-                <input type="range" id="activity-range9" min="100" max="1000" step="100" value="500">
+                <p><strong id="activity-number9">100g</strong></p>
+                <input type="range" id="activity-range9" min="0" max="250" step="50" value="100">
             </div>
         </div>
     </div>
+    <div class="conclusion">
+        <p>Your total recommended calorie count is: <%- total_bmr %></p>
+        <p>Your current calorie count:
+        <strong><span class="current-calorie">000</span></strong></p>
+        <p>Your chosen calorie count for breakfast:
+        <strong><span class="current-breakfast">000<span></span></strong></p>
+        <p>Your chosen calorie count for lunch:
+        <strong><span class="current-lunch">000</span></strong></p>
+        <p>Your chosen calorie count for dinner:
+        <strong><span class="current-dinner">000</span></strong></p>
+    </div>
+    <div class="margin"></div>
 </body>
 </html>
