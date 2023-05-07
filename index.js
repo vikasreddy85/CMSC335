@@ -30,13 +30,14 @@ if (process.argv.length !== 2) {
     console.log(`Web server started and running at http://localhost:${portNumber}`);
 }
 
-async function toInputMongo(name, email, array){
+async function toInputMongo(name, email, bmr, array){
 
     try {
         await client.connect();
         let newData = {
             name: name,
             email: email, 
+            bmr: bmr,
             breakfast1: array[0].name, 
             breakfast2: array[3].name, 
             breakfast3: array[6].name, 
@@ -190,7 +191,7 @@ app.post("/", (request, response) => {
         const randomIndex2 = Math.floor(Math.random() * (holder2.length - 1));
         const randomIndex3 = Math.floor(Math.random() * (holder3.length - 1));
 
-        console.log("A" + holder1 + "A");
+        //console.log("A" + holder1 + "A");
         let q1 = holder1[randomIndex1].query;
         let q2 = holder2[randomIndex2].query;
         let q3 = holder3[randomIndex3].query;
@@ -262,7 +263,7 @@ app.post("/", (request, response) => {
 
     Promise.all(meals).then(function(array){
         // console.log(array);
-        toInputMongo(name, email, array);
+        toInputMongo(name, email, total_bmr, array);
 
 
         response.render("result", {
@@ -340,6 +341,8 @@ app.post("/getInfo", async (request, response) => {
                             .findOne(filter);
         //console.log(result.name);
         response.render("result", {
+            name: result.name,
+            total_bmr: result.bmr, 
             breakfast1: result.breakfast1, 
             breakfast2: result.breakfast2, 
             breakfast3: result.breakfast3, 
