@@ -25,7 +25,7 @@
             name = "age"
             >
             <br>
-            <select id = "unit">
+            <select id = "unit" name = "unit">
                 <option value="kg">kg / cm</option>
                 <option value="lbs">lbs / ft</option>
             </select>
@@ -34,15 +34,15 @@
             <input
                 type="text"
                 id="height-cm"
-                placeholder="Enter your height in cm"
-                name = "heightcm"
+                placeholder="Enter your height in cm (ex. 175)"
+                name = "height"
             >
                 <input
                 type="text"
                 id="height-ft-in" 
                 class = "hide"
                 placeholder="Enter your height in ft and in (ex. 6 1)"
-                name = "heightft"
+                name = "height"
                 >
             <br>
             <label>Weight</label>
@@ -52,14 +52,14 @@
                 name = "weight"
             >
             <br>
-            <select>
+            <select name = "location">
                 <option value="South Diner"> South Diner</option>
                 <option value="North Diner">North Diner</option>
                 <option value="Y Diner">Yahentamitsi Dining Hall </option>
             </select>
             <br>
             <br>
-            <select>
+            <select name = "dietaryRestrictions">
                 <option value="none">None</option>
                 <option value="soy">Soy</option>
                 <option value="vegetarian">Vegetarian</option>
@@ -75,7 +75,7 @@
             min="1"
             max="5"
             step="0.01"
-            name = activity
+            name = "active"
             >
             <p><strong id="activity-number">3</strong></p>
             <br>
