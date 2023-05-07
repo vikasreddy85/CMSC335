@@ -43,7 +43,10 @@
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.8);
 }
 
-.small-box{
+.small-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 11vh;
     width: 95%;
     margin-left: 2.5%;
@@ -51,15 +54,14 @@
     background-color: white;
     border: 2px solid black;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.item-text{
+  }
+  
+  .item-text{
     font-family: 'Space Grotesk', sans-serif;	
-	line-height: 1.2;
+    line-height: 1.2;
     font-weight: 500;
     font-size: 64px;
-    transform: translate(37%, -55%);
-}
+  }
 
 .calories{
     display: flex;
