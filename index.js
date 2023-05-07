@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const path = require("path");
 const data = require('./public/data');
+const fetch = require('node-fetch');
 const portNumber = 3000;
 const {North_Diner, South_Diner, Yahentamitsi} = require("./public/data");
 let total_bmr;
@@ -37,7 +38,6 @@ app.get("/", (request, response) => {
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.post("/", (request, response) => {
-    const fetch = require('node-fetch');
     let total_bmr = 0.0;
     let hold_height;
     let temp_height; 
