@@ -18,3 +18,4 @@ rangeInput.addEventListener('input', function() {
   const value = rangeInput.value;
   numberDisplay.textContent = value;
 });
+

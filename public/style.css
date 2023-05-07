@@ -163,3 +163,10 @@ input:focus ~ label, input:valid ~ label 		{
   font-size:14px;
   color:#5264AE;
 }
+
+a {
+  text-decoration: none; /* remove underline */
+  display: inline-block; /* make hyperlink inline with the button */
+  width: 100%; /* make hyperlink span the full width of the button */
+  height: 100%; /* make hyperlink span the full height of the button */
+}
