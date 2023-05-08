@@ -3,7 +3,7 @@
 <div align="center"><h3><a href="https://cmsc335-final-project-121k.onrender.com/">Live App Demo</a> <h3><div>
 
 ## Description:
-This project is a webapp that calculates the number of recommended calories an individual has to consume each day based on information about themselves, and provides three food items from the dining hall to eat for breakfast, lunch, and dinner.
+<p>This project is a webapp that calculates the number of recommended calories an individual has to consume each day based on information about themselves, and provides three food items from the dining hall to eat for breakfast, lunch, and dinner.</p>
 
 ## Product Demo Video:
 [Youtube Link]
