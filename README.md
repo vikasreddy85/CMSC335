@@ -4,9 +4,9 @@
 
 ## Description:
 This project is a webapp that calculates the number of recommended calories an individual has to consume each day based on information about themselves, and provides three food items from the dining hall to eat for breakfast, lunch, and dinner.
-
-## Product Demo Video:
-[Youtube Link]
-
+  
 ## API Link:
 https://fdc.nal.usda.gov/api-guide.html
+
+## Product Demo Video:
+https://www.youtube.com/watch?v=lXicmPMeThU
