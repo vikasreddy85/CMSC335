@@ -30,7 +30,6 @@ if (process.argv.length !== 2) {
 }
 
 async function toInputMongo(name, email, bmr, array){
-
     try {
         await client.connect();
         let newData = {

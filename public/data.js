@@ -146,7 +146,7 @@ const Pancakes_Plain = {
   }
   
   const Buffalo_Chicken_Pizza  = {
-    query: 'Buffalo wing',
+    query: 'Buffalo Wing',
     dataType: ["Survey (FNDDS)"],
     pagesize: 1,
     location: "Y",
@@ -422,7 +422,7 @@ const Pancakes_Plain = {
   }
   
   const Spiral_Pasta_with_Chicken = {
-    query: "Pasta, whole grain, with tomato-based sauce and poultry, restaurant",
+    query: "Pasta",
     dataType: ["Survey (FNDDS)"],
     pagesize: 1,
     location: "Y",
