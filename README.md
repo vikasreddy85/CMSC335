@@ -1,5 +1,5 @@
 <h1 align="center">CMSC335 Final Project - My-Fitterp-Pal</h1>
-<p align="center">By: Vikas Reddy (vikas85) and Justin Pratama (___)</p>
+<p align="center">By: Vikas Reddy (Directory ID: vikas85) and Justin Pratama (Directory ID: jpratama)</p>
 <div align="center"><h3><a href="https://cmsc335-final-project-121k.onrender.com/">Live App Demo</a> <h3><div>
 
 ## Description:
