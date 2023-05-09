@@ -160,7 +160,7 @@ app.post("/", (request, response) => {
 
     //console.log(ht1[0].dietary);
 
-    if(dietaryRestrictions != "None"){
+    if(dietaryRestrictions != "None" && dietaryRestrictions != "vegetarian"){
         for(let j = 0; j < ht1.length; j++){
         if(ht1[j].dietary.includes(dietaryRestrictions) == false){
             holder1.push(ht1[j]);
@@ -176,6 +176,22 @@ app.post("/", (request, response) => {
             holder3.push(ht3[j]);
         }
         }
+    } else if(dietaryRestrictions == "vegetarian"){
+        for(let j = 0; j < ht1.length; j++){
+            if(ht1[j].dietary.includes("vegetarian")){
+                holder1.push(ht1[j]);
+            }
+            }
+            for(let j = 0; j < ht2.length; j++){
+            if(ht2[j].dietary.includes("vegetarian")){
+                holder2.push(ht2[j]);
+            }
+            }
+            for(let j = 0; j < ht3.length; j++){
+            if(ht3[j].dietary.includes("vegetarian")){
+                holder3.push(ht3[j]);
+            }
+            }
     } else{
         holder1 = loc.breakfast.slice();
         holder2 = loc.lunch.slice();
