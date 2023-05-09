@@ -351,7 +351,7 @@ const Pancakes_Plain = {
   }
   
   const Bow_Tie_Pasta = {
-    query: "Pasta",
+    query: "Bowtie Pasta",
     dataType: ["Survey (FNDDS)"],
     pagesize: 1,
     location: "Y",
@@ -422,7 +422,7 @@ const Pancakes_Plain = {
   }
   
   const Spiral_Pasta_with_Chicken = {
-    query: "Pasta",
+    query: "Spiral Pasta",
     dataType: ["Survey (FNDDS)"],
     pagesize: 1,
     location: "Y",
@@ -458,7 +458,7 @@ const Pancakes_Plain = {
   }
   
   const Tandoori_Chicken = {
-    query: "Chicken",
+    query: "Tandoori Chicken",
     dataType: ["Survey (FNDDS)"],
     pagesize: 1,
     location: "Y",
