@@ -386,7 +386,7 @@ const Pancakes_Plain = {
     dietary: ["dairy", "gluten", "vegetarian"]
   }
   const Egg_Cheese_Wrap = {
-    query: "Egg burrito",
+    query: "Egg Burrito",
     dataType: ["Survey (FNDDS)"],
     pagesize: 1,
     location: "Y",
@@ -395,7 +395,7 @@ const Pancakes_Plain = {
   }
   
   const Chicken_Cutlet = {
-    query: "Chicken",
+    query: "Chicken Cutlet",
     dataType: ["Survey (FNDDS)"],
     pagesize: 1,
     location: "Y",
@@ -520,10 +520,10 @@ const Pancakes_Plain = {
   }
   
   const Yahentamitsi = {
-    breakfast: [Pancakes_Plain, Pancakes_Chocolate_Chips, Mashed_Potatoes,Scrambled_Egg, Chorizo, French_Toast, English_Muffin, Yogurt, Greek_Yogurt, Strawberry_Yogurt, Brownie, Ice_Cream],
+    breakfast: [Pancakes_Plain, Pancakes_Chocolate_Chips, Mashed_Potatoes,Scrambled_Egg, Chorizo, French_Toast, English_Muffin, Yogurt, Greek_Yogurt, Strawberry_Yogurt, Brownie, Ice_Cream, Egg_Cheese_Wrap, Garlic_Bread],
     
-    lunch: [Pancakes_Plain, Scrambled_Egg, Sandwich, Grilled_Hot_Dog, Onion_Marmalade_Sandwich, Chorizo, French_Toast, English_Muffin, Greek_Yogurt, Yogurt, Strawberry_Yogurt, Biscuit, Mashed_Potatoes, Cornbread, Croissant, Buffalo_Chicken_Pizza, Cheese_Pizza, Margherita_Pizza, Pepperoni_Pizza],
+    lunch: [Pancakes_Plain, Scrambled_Egg, Sandwich, Grilled_Hot_Dog, Onion_Marmalade_Sandwich, Chorizo, French_Toast, English_Muffin, Greek_Yogurt, Yogurt, Strawberry_Yogurt, Biscuit, Mashed_Potatoes, Cornbread, Croissant, Buffalo_Chicken_Pizza, Cheese_Pizza, Margherita_Pizza, Pepperoni_Pizza, Grilled_Chicken_Burger, Vegetable_Biryani],
     
-    dinner: [Grilled_Hot_Dog, Onion_Marmalade_Sandwich, White_Chicken, Pesto_Pasta, Philly_Cheese_Steak_Pizza, Vegetable_Pizza, Spaghetti]
+    dinner: [Grilled_Hot_Dog, Onion_Marmalade_Sandwich, White_Chicken, Pesto_Pasta, Philly_Cheese_Steak_Pizza, Vegetable_Pizza, Spaghetti, Cheeseburger, Vegetable_Biryani, Spiral_Pasta_with_Chicken, Steamed_Corn, Brownie]
   };
   module.exports = {North_Diner, South_Diner, Yahentamitsi}
