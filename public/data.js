@@ -36,7 +36,7 @@ const Pancakes_Plain = {
   };
   
   const Grilled_Hot_Dog = {
-    query: 'Hot Dog',
+    query: 'Grilled Hot Dog',
     dataType: ["Survey (FNDDS)"],
     pagesize: 1,
     location: "Y",
@@ -146,7 +146,7 @@ const Pancakes_Plain = {
   }
   
   const Buffalo_Chicken_Pizza  = {
-    query: 'Buffalo Wing',
+    query: 'Buffalo Chicken Pizza',
     dataType: ["Survey (FNDDS)"],
     pagesize: 1,
     location: "Y",
@@ -164,7 +164,7 @@ const Pancakes_Plain = {
   }
   
   const Margherita_Pizza  = {
-    query: 'Cheese Pizza',
+    query: 'Margherita Pizza',
     dataType: ["Survey (FNDDS)"],
     pagesize: 1,
     location: "Y",
@@ -199,7 +199,7 @@ const Pancakes_Plain = {
   }
   
   const Philly_Cheese_Steak_Pizza = {
-    query: "Pizza",
+    query: "Pilly Steak Pizza",
     dataType: ["Survey (FNDDS)"],
     pagesize: 1,
     location: "Y",
@@ -226,7 +226,7 @@ const Pancakes_Plain = {
   }
   
   const BBQ_Chicken_Sandwich = {
-    query: "BBQ Sandwich",
+    query: "BBQ Chicken Sandwich",
     dataType: ["Survey (FNDDS)"],
     pagesize: 1,
     location: "Y",
@@ -243,7 +243,7 @@ const Pancakes_Plain = {
   }
   
   const Steamed_Corn = {
-    query: "Corn",
+    query: "Steamed Corn",
     dataType: ["Survey (FNDDS)"],
     pagesize: 1,
     location: "Y",
@@ -279,7 +279,7 @@ const Pancakes_Plain = {
   }
   
   const Italian_Sausage_Pizza = {
-    query: "Mexican Pizza",
+    query: "Italian Sausage Pizza",
     dataType: ["Survey (FNDDS)"],
     pagesize: 1,
     location: "Y",
