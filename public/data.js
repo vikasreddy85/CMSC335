@@ -99,7 +99,7 @@ const Pancakes_Plain = {
   }
   
   const Strawberry_Yogurt = {
-    query: 'Yogurt',
+    query: 'Strawberry Yogurt',
     dataType: ["Survey (FNDDS)"],
     pagesize: 1,
     location: "Y",
